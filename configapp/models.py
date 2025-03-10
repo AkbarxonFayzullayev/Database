@@ -24,7 +24,7 @@ class Employee(BaseModel):
     first_name = models.CharField(max_length=25)
     middle_name = models.CharField(max_length=25)
     last_name = models.CharField(max_length=25)
-    phone = models.CharField(max_length=20)
+    phone = models.CharField(max_length=20,blank=True, null=True)
     email = models.CharField(max_length=75)
     data_file = models.FileField(upload_to='uploads/')
     region = models.ForeignKey(Region,on_delete=models.CASCADE)
